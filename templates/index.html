@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liver Cirrhosis Prediction</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+    <h2>Liver Cirrhosis Prediction Form</h2>
+    <form action="/predict" method="post">
+        Age: <input type="number" name="Age" step="any"><br>
+        Gender (1=Male, 0=Female): <input type="number" name="Gender"><br>
+        Duration of alcohol consumption (years): <input type="number" name="Duration of alcohol consumption(years)" step="any"><br>
+        Quantity of alcohol (quarters/day): <input type="number" name="Quantity of alcohol consumption (quarters/day)" step="any"><br>
+        Hepatitis B infection (1=Yes, 0=No): <input type="number" name="Hepatitis B infection"><br>
+        Hepatitis C infection (1=Yes, 0=No): <input type="number" name="Hepatitis C infection"><br>
+        Diabetes Result (1=Positive, 0=Negative): <input type="number" name="Diabetes Result"><br>
+        Total Bilirubin (mg/dl): <input type="number" name="Total Bilirubin (mg/dl)" step="any"><br>
+        Albumin (g/dl): <input type="number" name="Albumin (g/dl)" step="any"><br>
+        SGOT/AST (U/L): <input type="number" name="SGOT/AST (U/L)" step="any"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    <br>
+    <h3>{{ prediction_text }}</h3>
+</body>
+</html>
